@@ -1,0 +1,14 @@
+# Simple package
+
+name: espanso-meta
+parent: default
+
+matches:
+  - trigger: ":trg"
+    replace: "\t- trigger:\n\treplace: "
+  - trigger: "estart"
+    replace: "espanso restart"
+    word: true
+  - trigger: "estall"
+    replace: "espanso install $|$ && espanso restart"
+    word: true
